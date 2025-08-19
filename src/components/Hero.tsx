@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
         animate="visible"
       >
         {/* Hero Content */}
-        <div className="backdrop-blur-md bg-slate-900/30 rounded-3xl p-8 md:p-12 border border-slate-700/50 shadow-2xl">
+        <div className="backdrop-blur-md bg-slate-900/20 rounded-3xl p-8 md:p-12 border border-slate-700/30 shadow-2xl">
           <motion.h1 
             variants={itemVariants}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4"
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
             className="flex justify-center space-x-4 mb-8"
           >
             <motion.a 
-              href="https://github.com" 
+              href="https://github.com/Nyerho" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -2 }}
@@ -108,16 +108,16 @@ const Hero: React.FC = () => {
           >
             <Button
               onClick={() => scrollToSection('projects')}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+              size="sm"
             >
               View Projects
             </Button>
             
             <Button
               variant="outline"
-              className="border-slate-600 text-slate-300 hover:bg-slate-800/50 hover:text-white px-8 py-3 rounded-full transition-all duration-300"
-              size="lg"
+              className="border-slate-600 text-slate-300 hover:bg-slate-800/50 hover:text-white px-6 py-2 rounded-full transition-all duration-300"
+              size="sm"
             >
               <Download className="w-4 h-4 mr-2" />
               Download Resume

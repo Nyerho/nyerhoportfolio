@@ -66,7 +66,7 @@ const About: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="backdrop-blur-md bg-slate-900/30 rounded-3xl p-8 md:p-12 border border-slate-700/50 shadow-2xl"
+          className="backdrop-blur-md bg-slate-900/20 rounded-3xl p-8 md:p-12 border border-slate-700/30 shadow-2xl"
         >
           <motion.h2 
             variants={itemVariants}
@@ -78,7 +78,7 @@ const About: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Profile Section */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm">
+              <Card className="bg-slate-800/30 border-slate-700/40 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                     <motion.div
@@ -108,7 +108,7 @@ const About: React.FC = () => {
               </Card>
 
               {/* Expertise Areas */}
-              <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm">
+              <Card className="bg-slate-800/30 border-slate-700/40 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-white">Core Expertise</CardTitle>
                 </CardHeader>
@@ -133,7 +133,7 @@ const About: React.FC = () => {
             
             {/* Skills Section */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm">
+              <Card className="bg-slate-800/30 border-slate-700/40 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-white">Technical Skills</CardTitle>
                 </CardHeader>
@@ -177,7 +177,7 @@ const About: React.FC = () => {
               </Card>
 
               {/* Additional Info */}
-              <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm">
+              <Card className="bg-slate-800/30 border-slate-700/40 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <h4 className="text-lg font-semibold text-white mb-4">Professional Focus</h4>
                   <p className="text-slate-300 leading-relaxed">

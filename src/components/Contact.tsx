@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitMessage('Thank you! Your message has been sent successfully. I\'ll get back to you soon.');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
+    } catch {
       setSubmitMessage('Sorry, there was an error sending your message. Please try again or contact me directly.');
     } finally {
       setIsSubmitting(false);
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="backdrop-blur-md bg-slate-900/30 rounded-3xl p-8 md:p-12 border border-slate-700/50 shadow-2xl"
+          className="backdrop-blur-md bg-slate-900/20 rounded-3xl p-8 md:p-12 border border-slate-700/30 shadow-2xl"
         >
           <motion.h2 
             variants={itemVariants}
@@ -127,7 +127,7 @@ const Contact: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm">
+              <Card className="bg-slate-800/30 border-slate-700/40 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-white flex items-center">
                     <MessageSquare className="w-5 h-5 mr-2 text-blue-400" />
@@ -190,7 +190,7 @@ const Contact: React.FC = () => {
               </Card>
               
               {/* Social Links */}
-              <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm">
+              <Card className="bg-slate-800/30 border-slate-700/40 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-white">Follow Me</CardTitle>
                 </CardHeader>
@@ -223,7 +223,7 @@ const Contact: React.FC = () => {
             
             {/* Contact Form */}
             <motion.div variants={itemVariants}>
-              <Card className="bg-slate-800/50 border-slate-700/50 backdrop-blur-sm">
+              <Card className="bg-slate-800/30 border-slate-700/40 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-white">Send Message</CardTitle>
                 </CardHeader>
@@ -317,9 +317,9 @@ const Contact: React.FC = () => {
                           ? 'bg-slate-600 cursor-not-allowed'
                           : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-[1.02] shadow-lg hover:shadow-xl'
                       } text-white font-semibold`}
-                      size="lg"
+                      size="sm"
                     >
-                      <Send className="w-5 h-5 mr-2" />
+                      <Send className="w-4 h-4 mr-2" />
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>
                     

@@ -89,8 +89,7 @@ const Projects: React.FC = () => {
   useEffect(() => {
     const fetchRepositories = async () => {
       try {
-        // Replace 'username' with actual GitHub username
-        const response = await fetch('https://api.github.com/users/octocat/repos?sort=updated&per_page=6');
+        const response = await fetch('https://api.github.com/users/Nyerho/repos?sort=updated&per_page=6');
         const data = await response.json();
         setRepositories(data);
       } catch (error) {
@@ -149,7 +148,7 @@ const Projects: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="backdrop-blur-md bg-slate-900/30 rounded-3xl p-8 md:p-12 border border-slate-700/50 shadow-2xl"
+          className="backdrop-blur-md bg-slate-900/20 rounded-3xl p-8 md:p-12 border border-slate-700/30 shadow-2xl"
         >
           <motion.h2 
             variants={itemVariants}
@@ -167,6 +166,7 @@ const Projects: React.FC = () => {
               <Button
                 key={category}
                 variant={selectedFilter === category ? "default" : "outline"}
+                size="sm"
                 onClick={() => setSelectedFilter(category)}
                 className={`transition-all duration-300 ${
                   selectedFilter === category
@@ -182,7 +182,7 @@ const Projects: React.FC = () => {
           
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {filteredProjects.map((project, index) => (
+            {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
@@ -194,7 +194,7 @@ const Projects: React.FC = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 className="group"
               >
-                <Card className="h-full bg-slate-800/50 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300 overflow-hidden">
+                <Card className="h-full bg-slate-800/30 border-slate-700/40 backdrop-blur-sm hover:bg-slate-800/50 transition-all duration-300 overflow-hidden">
                   {/* Project Image */}
                   <div className="relative overflow-hidden">
                     <motion.img
@@ -242,6 +242,7 @@ const Projects: React.FC = () => {
                   <CardFooter className="flex gap-3">
                     <Button
                       asChild
+                      size="sm"
                       className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                     >
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
@@ -252,6 +253,7 @@ const Projects: React.FC = () => {
                     <Button
                       asChild
                       variant="outline"
+                      size="sm"
                       className="flex-1 border-slate-600 text-slate-300 hover:bg-slate-700/50 hover:text-white"
                     >
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -274,7 +276,7 @@ const Projects: React.FC = () => {
             {loading ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[...Array(6)].map((_, i) => (
-                  <Card key={i} className="bg-slate-800/50 border-slate-700/50 animate-pulse">
+                  <Card key={i} className="bg-slate-800/30 border-slate-700/40 animate-pulse">
                     <CardHeader>
                       <div className="h-4 bg-slate-700 rounded w-3/4"></div>
                       <div className="h-3 bg-slate-700 rounded w-full"></div>
@@ -294,7 +296,7 @@ const Projects: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <Card className="h-full bg-slate-800/50 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300">
+                    <Card className="h-full bg-slate-800/30 border-slate-700/40 backdrop-blur-sm hover:bg-slate-800/50 transition-all duration-300">
                       <CardHeader>
                         <CardTitle className="text-white text-lg">{repo.name}</CardTitle>
                         <CardDescription className="text-slate-400">
@@ -311,6 +313,7 @@ const Projects: React.FC = () => {
                         <Button
                           asChild
                           variant="outline"
+                          size="sm"
                           className="w-full border-slate-600 text-slate-300 hover:bg-slate-700/50 hover:text-white"
                         >
                           <a href={repo.html_url} target="_blank" rel="noopener noreferrer">

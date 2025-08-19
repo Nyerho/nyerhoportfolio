@@ -4,16 +4,18 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
+import GitHubShowcase from './components/GitHubShowcase';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import BackgroundSlideshow from './components/BackgroundSlideshow';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'contact'];
+      const sections = ['home', 'about', 'projects', 'github', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -36,14 +38,8 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-slate-950">
-      {/* Fixed Background with Overlay */}
-      <div 
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style={{
-          backgroundImage: `url('https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')`
-        }}
-      />
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/85 to-slate-900/90 z-0" />
+      {/* Background Slideshow */}
+      <BackgroundSlideshow />
       
       {/* Content */}
       <div className="relative z-10">
@@ -56,6 +52,7 @@ function App() {
           <Hero />
           <About />
           <Projects />
+          <GitHubShowcase />
           <Contact />
           <Footer />
         </motion.div>

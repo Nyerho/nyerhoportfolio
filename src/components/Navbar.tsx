@@ -14,6 +14,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
+    { id: 'github', label: 'GitHub' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -30,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 w-full z-50 backdrop-blur-md bg-slate-900/20 border-b border-slate-700/50"
+      className="fixed top-0 w-full z-50 backdrop-blur-md bg-slate-900/10 border-b border-slate-700/30"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
@@ -48,6 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               <Button
                 key={item.id}
                 variant="ghost"
+                size="sm"
                 onClick={() => scrollToSection(item.id)}
                 className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 ${
                   activeSection === item.id
@@ -101,6 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                   >
                     <Button
                       variant="ghost"
+                      size="sm"
                       onClick={() => scrollToSection(item.id)}
                       className={`w-full justify-start text-base font-medium transition-all duration-300 ${
                         activeSection === item.id
