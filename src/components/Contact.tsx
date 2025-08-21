@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageSquare, Instagram, Twitter } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -74,15 +75,34 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Simulate form submission (replace with actual EmailJS or API call)
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // EmailJS configuration
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_default';
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_default';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
+      
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Esiso Oghenenyerhovwo',
+        },
+        publicKey
+      );
+      
+      console.log('Email sent successfully:', result.text);
       setSubmitMessage('Thank you! Your message has been sent successfully. I\'ll get back to you soon.');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch {
-      setSubmitMessage('Sorry, there was an error sending your message. Please try again or contact me directly.');
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setSubmitMessage('Sorry, there was an error sending your message. Please try again or contact me directly at neroesiso@gmail.com');
     } finally {
       setIsSubmitting(false);
-      setTimeout(() => setSubmitMessage(''), 5000);
+      setTimeout(() => setSubmitMessage(''), 8000);
     }
   };
 
