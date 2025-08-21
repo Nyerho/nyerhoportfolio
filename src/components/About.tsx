@@ -80,29 +80,14 @@ const About: React.FC = () => {
             <motion.div variants={itemVariants} className="space-y-6">
               <Card className="bg-slate-800/30 border-slate-700/40 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      className="relative"
-                    >
-                      <img
-                        src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
-                        alt="Esiso Oghenenyerhovwo"
-                        className="w-32 h-32 rounded-full object-cover shadow-xl border-4 border-blue-400/20"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/20 to-purple-600/20"></div>
-                    </motion.div>
-                    
-                    <div className="flex-1 text-center md:text-left">
-                      <h3 className="text-xl font-bold text-white mb-2">Data Analyst</h3>
-                      <p className="text-blue-400 mb-4">2+ Years Experience</p>
-                      <p className="text-slate-300 leading-relaxed">
-                        Passionate data analyst with expertise in transforming complex datasets into 
-                        actionable business insights. Specialized in creating compelling visualizations 
-                        and developing data-driven solutions that drive strategic decision-making.
-                      </p>
-                    </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-white mb-2">Data Analyst</h3>
+                    <p className="text-blue-400 mb-4">2+ Years Experience</p>
+                    <p className="text-slate-300 leading-relaxed">
+                      Passionate data analyst with expertise in transforming complex datasets into 
+                      actionable business insights. Specialized in creating compelling visualizations 
+                      and developing data-driven solutions that drive strategic decision-making.
+                    </p>
                   </div>
                 </CardContent>
               </Card>
