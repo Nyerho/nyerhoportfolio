@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageSquare, Instagram, Twitter } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -154,7 +154,7 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-white font-medium">Email</p>
-                        <p className="text-slate-300">esiso.oghenenyerhovwo@email.com</p>
+                        <p className="text-slate-300">neroesiso@gmail.com</p>
                       </div>
                     </motion.div>
                     
@@ -168,7 +168,7 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-white font-medium">Phone</p>
-                        <p className="text-slate-300">+234 (0) 123-456-7890</p>
+                        <p className="text-slate-300">+234907039936</p>
                       </div>
                     </motion.div>
                     
@@ -197,7 +197,7 @@ const Contact: React.FC = () => {
                 <CardContent>
                   <div className="flex space-x-4">
                     <motion.a
-                      href="https://github.com"
+                      href="https://github.com/Nyerho"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, y: -2 }}
@@ -215,6 +215,26 @@ const Contact: React.FC = () => {
                       className="p-3 bg-slate-700/50 rounded-full hover:bg-slate-600/50 transition-all duration-300 border border-slate-600/50"
                     >
                       <Linkedin className="w-6 h-6 text-white" />
+                    </motion.a>
+                    <motion.a
+                      href="https://instagram.com/nye.rho"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="p-3 bg-slate-700/50 rounded-full hover:bg-slate-600/50 transition-all duration-300 border border-slate-600/50"
+                    >
+                      <Instagram className="w-6 h-6 text-white" />
+                    </motion.a>
+                    <motion.a
+                      href="https://twitter.com/nyerhoesiso"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="p-3 bg-slate-700/50 rounded-full hover:bg-slate-600/50 transition-all duration-300 border border-slate-600/50"
+                    >
+                      <Twitter className="w-6 h-6 text-white" />
                     </motion.a>
                   </div>
                 </CardContent>

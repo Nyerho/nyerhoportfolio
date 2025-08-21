@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail, Download, Instagram, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero: React.FC = () => {
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
             variants={itemVariants}
             className="text-xl md:text-2xl lg:text-3xl text-blue-400 mb-6 font-semibold"
           >
-            Junior Data Analyst
+            Data Analyst
           </motion.h2>
           
           <motion.p 
@@ -92,12 +92,32 @@ const Hero: React.FC = () => {
               <Linkedin className="w-6 h-6 text-white" />
             </motion.a>
             <motion.a 
-              href="mailto:esiso.oghenenyerhovwo@email.com"
+              href="mailto:neroesiso@gmail.com"
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="p-3 bg-slate-800/50 rounded-full hover:bg-slate-700/50 transition-all duration-300 border border-slate-600/50"
             >
               <Mail className="w-6 h-6 text-white" />
+            </motion.a>
+            <motion.a 
+              href="https://instagram.com/nye.rho" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-3 bg-slate-800/50 rounded-full hover:bg-slate-700/50 transition-all duration-300 border border-slate-600/50"
+            >
+              <Instagram className="w-6 h-6 text-white" />
+            </motion.a>
+            <motion.a 
+              href="https://twitter.com/nyerhoesiso" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-3 bg-slate-800/50 rounded-full hover:bg-slate-700/50 transition-all duration-300 border border-slate-600/50"
+            >
+              <Twitter className="w-6 h-6 text-white" />
             </motion.a>
           </motion.div>
           

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BarChart3, Github, Linkedin, Mail } from 'lucide-react';
+import { BarChart3, Github, Linkedin, Mail, Instagram, Twitter } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 const Footer: React.FC = () => {
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             <BarChart3 className="w-8 h-8 text-blue-400 mr-3" />
             <div>
               <h3 className="text-xl font-bold text-white">Esiso Oghenenyerhovwo</h3>
-              <p className="text-slate-400 text-sm">Junior Data Analyst</p>
+              <p className="text-slate-400 text-sm">Data Analyst</p>
             </div>
           </motion.div>
 
@@ -82,12 +82,32 @@ const Footer: React.FC = () => {
               <Linkedin className="w-5 h-5 text-white" />
             </motion.a>
             <motion.a
-              href="mailto:esiso.oghenenyerhovwo@email.com"
+              href="mailto:neroesiso@gmail.com"
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="p-3 bg-slate-800/50 rounded-full hover:bg-slate-700/50 transition-all duration-300 border border-slate-600/50"
             >
               <Mail className="w-5 h-5 text-white" />
+            </motion.a>
+            <motion.a
+              href="https://instagram.com/nye.rho"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-3 bg-slate-800/50 rounded-full hover:bg-slate-700/50 transition-all duration-300 border border-slate-600/50"
+            >
+              <Instagram className="w-5 h-5 text-white" />
+            </motion.a>
+            <motion.a
+              href="https://twitter.com/nyerhoesiso"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-3 bg-slate-800/50 rounded-full hover:bg-slate-700/50 transition-all duration-300 border border-slate-600/50"
+            >
+              <Twitter className="w-5 h-5 text-white" />
             </motion.a>
           </div>
         </div>

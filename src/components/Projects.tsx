@@ -36,54 +36,44 @@ const Projects: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
-  // Featured projects with custom data
+  // Featured projects with custom data - Only Canva projects
   const featuredProjects: Project[] = [
     {
       id: 1,
-      title: 'Sales Performance Dashboard',
-      description: 'Interactive Power BI dashboard analyzing sales trends, customer segmentation, and revenue forecasting with real-time KPI tracking and automated reporting.',
+      title: 'Data Visualization Design',
+      description: 'Professional data visualization and dashboard design created with Canva, showcasing modern design principles for data presentation and analytics reporting.',
       image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Power BI', 'DAX', 'SQL', 'Excel'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
-      category: 'Dashboard',
+      technologies: ['Canva', 'Design', 'Data Visualization', 'Graphics'],
+      liveUrl: 'https://www.canva.com/design/DAGM4-R0NEY/fFjlXeEdS6i6JgRu21OHuA/view',
+      githubUrl: 'https://www.canva.com/design/DAGM4-R0NEY/fFjlXeEdS6i6JgRu21OHuA/view',
+      category: 'Design',
       featured: true
     },
     {
       id: 2,
-      title: 'Customer Analytics Platform',
-      description: 'Python-based analytics platform for customer behavior analysis, churn prediction, and lifetime value calculation using machine learning algorithms.',
+      title: 'Professional Dashboard Template',
+      description: 'Modern and clean dashboard design template created with Canva, featuring data visualization elements, charts, and professional layout for business presentations.',
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Python', 'Pandas', 'Scikit-learn', 'Matplotlib'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
-      category: 'Analytics',
+      technologies: ['Canva', 'Dashboard Design', 'UI/UX', 'Templates'],
+      liveUrl: 'https://www.canva.com/design/DAGwiMeMHBg/1lT0IChYqq6823ogEwzVlg/view?utm_content=DAGwiMeMHBg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h66724e32ad',
+      githubUrl: 'https://www.canva.com/design/DAGwiMeMHBg/1lT0IChYqq6823ogEwzVlg/view?utm_content=DAGwiMeMHBg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h66724e32ad',
+      category: 'Design',
       featured: true
     },
     {
       id: 3,
-      title: 'Financial Reporting Automation',
-      description: 'Automated financial reporting system using Excel VBA and Power Query to streamline monthly reporting processes and reduce manual errors.',
-      image: 'https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Excel', 'VBA', 'Power Query', 'Power Pivot'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
-      category: 'Automation',
+      title: 'Business Analytics Infographic',
+      description: 'Creative and informative infographic design showcasing business analytics concepts, data trends, and key performance indicators with modern visual elements.',
+      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
+      technologies: ['Canva', 'Infographic Design', 'Data Presentation', 'Visual Communication'],
+      liveUrl: 'https://www.canva.com/design/DAGPtjV2vvk/EvKIdKxW6qtdTUCwhjApgQ/view?utm_content=DAGPtjV2vvk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0217b062fa',
+      githubUrl: 'https://www.canva.com/design/DAGPtjV2vvk/EvKIdKxW6qtdTUCwhjApgQ/view?utm_content=DAGPtjV2vvk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0217b062fa',
+      category: 'Design',
       featured: true
-    },
-    {
-      id: 4,
-      title: 'Web Traffic Analysis',
-      description: 'Comprehensive web analytics solution using Google Analytics API and Python to track user behavior, conversion rates, and marketing campaign effectiveness.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Google Analytics', 'Python', 'API', 'Data Studio'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
-      category: 'Web Analytics'
     }
   ];
 
-  const categories = ['All', 'Dashboard', 'Analytics', 'Automation', 'Web Analytics'];
+  const categories = ['All', 'Design'];
 
   // Fetch GitHub repositories
   useEffect(() => {
@@ -130,6 +120,8 @@ const Projects: React.FC = () => {
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
+      case 'Design':
+        return <BarChart3 className="w-4 h-4" />;
       case 'Dashboard':
         return <BarChart3 className="w-4 h-4" />;
       case 'Analytics':

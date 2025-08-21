@@ -95,7 +95,7 @@ const About: React.FC = () => {
                     </motion.div>
                     
                     <div className="flex-1 text-center md:text-left">
-                      <h3 className="text-xl font-bold text-white mb-2">Junior Data Analyst</h3>
+                      <h3 className="text-xl font-bold text-white mb-2">Data Analyst</h3>
                       <p className="text-blue-400 mb-4">2+ Years Experience</p>
                       <p className="text-slate-300 leading-relaxed">
                         Passionate data analyst with expertise in transforming complex datasets into 
